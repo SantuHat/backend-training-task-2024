@@ -110,23 +110,27 @@ b += 1;    // b = 1   // 將 b 變數(0) + 一個 1 的數字型別重新賦予 
 
 // ### 題目九：型別查詢
 // 請不要觀看 console.log，透過註解告知解答每個變數的型別
-let c = 'world'; // 'world'，字串
-let d = 456; // 456，數字
-let e = c + d; // 'world456'，字串
-let f = false; // false，布林值
-let g = d + d; // 912，數字
-let h = f + g; // false，布林值
+let c = 'world'; // 'world'
+let d = 456; // 456
+let e = c + d; // 'world456'
+let f = false; // false
+let g = d + d; // 912
+let h = f + g; // false
 
 // 請從以下新增註解，告知上面每行各別是哪些型別
 // c 是 string
-// d 是 ???
+// d 是 數字
+// e 是 字串
+// f 是 布林值
+// g 是 數字
+// h 是 布林值
 
 // ### 題目十：傳值與傳參考
 // 情境：請依照程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 
-let numberArr1 = [5, 10, 15];
-let numberArr2 = numberArr1;
-numberArr2.push(20);
-numberArr2 = [25, 30, 35];
-console.log(numberArr1, numberArr2);
+let numberArr1 = [5, 10, 15]; //[5, 10, 15]， 將一個陣列型別賦予 numberArr1 變數
+let numberArr2 = numberArr1; //[5, 10, 15]， 將 numberArr1 變數重新賦予 numberArr2 變數(陣列)
+numberArr2.push(20); //[5, 10, 15, 20]，  新增數字 20 到 numberArr2 變數
+numberArr2 = [25, 30, 35]; //[25, 30, 35]，將[25, 30, 35]陣列重新賦予 numberArr2 變數
+console.log(numberArr1, numberArr2); //[5, 10, 15],[25, 30, 35]
