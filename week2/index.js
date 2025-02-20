@@ -26,7 +26,7 @@ console.log(g * h === 64); // true
 
 let i = '9';
 let j = '9';
-console.log(i + j == 99); // false
+console.log(i + j == 99); // true  為寬鬆相等，會先隱式轉換型別
 console.log(i + j === '99'); // true
 console.log(i + j === 99); // false
 
@@ -49,7 +49,7 @@ let BobPrice = 1800; /* Bob 消費金額 */
 let BobIsVip = false; /* Bob 是否為 VIP */
 
 // 練習：（可自行將下方程式碼的註解刪除，完成答題）
-if (BobPrice >= giftPriceRule && BobIsVip) {
+if (BobPrice >= giftPriceRule || BobIsVip) {//「只要有達成條件之一，就送會員一個贈品」
   console.log("客戶您好，您有符合贈品資格");
   giftNum--;
 } else {
@@ -75,7 +75,7 @@ let coachBonus = baseBonus; // 教練業績獎金帳單，並已加入條件一�
 // 練習：計算教練業績獎金
 if(coachIncome <= 100000) {
   coachBonus += coachIncome * 0.1;
-}else if(coachIncome >= 100000 && coachIncome <= 300000) {
+}else if(coachIncome > 100000 && coachIncome <= 300000) {
   coachBonus += coachIncome * 0.15;
 }else{
   coachBonus += coachIncome * 0.2;
