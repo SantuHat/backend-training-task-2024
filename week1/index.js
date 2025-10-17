@@ -119,6 +119,13 @@ let e = c + d; // 'world456'
 let f = false; // false
 let g = d + d; // 912
 let h = f + g; // false
+console.log(`c=${c}`);
+console.log(`d=${d}`);
+console.log(`e=${e}`);
+console.log(`f=${f}`);
+console.log(`g=${g}`);
+console.log(`h=${h}`);
+
 
 // 請從以下新增註解，告知上面每行各別是哪些型別
 // c 是 string
